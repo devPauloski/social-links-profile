@@ -1,0 +1,131 @@
+:root {
+  /* Colors */
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --ff-primary: "Inter", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600; 
+  --fw-bold: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-block-size: 100vh;
+  line-height: 1.5;
+}
+
+img, svg,
+picture {
+  max-inline-size: 100%;
+  display: block;
+}
+
+/* General Styling */
+body {
+  font-family: var(--ff-primary);
+  font-size: .875rem;
+  font-weight: var(--fw-regular);
+  color: var(--clr-white);
+  background-color: var(--clr-grey-900);
+  place-content: center;
+  text-align: center;
+  padding-block: 2rem;
+}
+
+/* Main Content */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.wrapper {
+  inline-size: min(24rem, 90%);
+  margin-inline: auto;
+  background-color: var(--clr-grey-800);
+  padding: 2.5rem;
+  border-radius: .5rem;
+}
+
+.avatar-wrapper {
+  display: grid;
+  place-content: center;
+  margin-block-end: 1.25rem;
+}
+
+.avatar-wrapper img {
+  width: 5.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 1.625rem;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-white);
+  line-height: 1.125;
+  margin-block-end: .625rem;
+}
+
+.location {
+  font-weight: var(--fw-semibold);
+  color: var(--clr-green);
+  margin-block-end: 1.5rem;
+}
+
+.about {
+  color: hsl(0, 0%, 90%);
+  margin-block-end: 1.25rem;
+}
+
+.social-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--clr-white);
+  text-decoration: none;
+  background-color: var(--clr-grey-700);
+  padding-block: .75rem;
+  border-radius: 6px;
+  font-weight: var(--fw-semibold);
+}
+
+.social-links a:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-800);
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--clr-white);
+}
