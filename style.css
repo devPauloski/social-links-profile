@@ -69,16 +69,19 @@ body {
 }
 
 .wrapper {
+  --space-16-40: clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem);
+
   inline-size: min(24rem, 90%);
   margin-inline: auto;
   background-color: var(--clr-grey-800);
-  padding: 2.5rem;
+  padding: var(--space-16-40);
   border-radius: .5rem;
 }
 
 .avatar-wrapper {
   display: grid;
   place-content: center;
+  padding-inline: .5rem;
   margin-block-end: 1.25rem;
 }
 
@@ -89,7 +92,10 @@ body {
 }
 
 .profile-name {
-  font-size: 1.625rem;
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1240,18—26&p=fs */
+  --fs-18-26: clamp(1.125rem, 0.9511rem + 0.8696vw, 1.625rem);
+
+  font-size: var(--fs-18-26);
   font-weight: var(--fw-semibold);
   color: var(--clr-white);
   line-height: 1.125;
@@ -117,7 +123,8 @@ body {
   text-decoration: none;
   background-color: var(--clr-grey-700);
   padding-block: .75rem;
-  border-radius: 6px;
+  padding-inline: .5rem;
+  border-radius: .375rem;
   font-weight: var(--fw-semibold);
 }
 
